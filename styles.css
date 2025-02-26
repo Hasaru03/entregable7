@@ -1,6 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
+    background-color: #F9B5AC;
     justify-content: center;
     font-family: 'montserrat', sans-serif;
     margin: 0;
@@ -8,15 +9,17 @@ body {
 }
 
 header {
-    background-color: aqua;
+    color: white;
+    background-color: #4BA3C3;
     padding: 1vh 10vw 1vh 10vw;
     text-align: center;
 }
 
 main {
+    color: white;
     display: flex;
     flex-direction: row;
-    background-color: lightgray;
+    background-color: #175676;
     height: 80vh;
     min-height: 400px;
     justify-content: center;
@@ -43,16 +46,20 @@ footer {
 #contact-info {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
 }
 
 .contact-icon {
-margin: 10px;
+margin: 15px;
+    :hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease-in-out;
+    }
 }
 
 section {
-    background-color: yellowgreen;
+    background-color: #CCE6F4;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -64,6 +71,7 @@ section {
     flex-direction: column;
     align-self: center;
     background: white;
+    color: #175676;
     border-radius: 15px;
     margin-bottom: 40px;
     margin-top: 40px;
@@ -87,8 +95,7 @@ table {
 
 th, td {
     border-radius: 10px;
-    background-color: rgb(48, 130, 155);
-    padding: 8px;
+    background-color: #987284;
     text-align: center;
     width: 100px;
     box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
@@ -97,3 +104,70 @@ th, td {
     color: white;
 }
 
+aside {
+    background-color: rgba(48, 130, 155, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 3em;
+    margin: 100px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.3);
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    text-align: center;
+    margin-bottom: 15px;
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    color: rgba(0, 0, 0, 0.63);
+    margin-bottom: 1em;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    align-self: center;
+
+    &:hover {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      }
+
+      &:focus {
+        outline: none;
+        background: rgba(255,255,255,0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+        width: 220px;
+        transition: all 0.2s ease-in-out;
+      }
+}
+input[type="submit"] {
+    width: 100px;
+    border-radius: 10000px;
+    background-color: rgba(48, 130, 155, 0.5);
+}
+
+h4 {
+    margin: 0px 0px 50px 0px;
+    color: rgb(73, 73, 73);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+footer {
+    background-color: #987284;
+}
